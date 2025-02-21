@@ -1,46 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Oh My Food</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="Dossier-assets/style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oh My Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="Sass/style.css" />
+  </head>
 
-    <header>
-        <div class="header-main">
-            <div class="header-logo">
-                <img src="Dossier-assets/ohmyfood.png" alt="Logo OhMyFood" title="OhMyFood">
+  <header>
+    <div class="header-main">
+      <div class="header-logo">
+        <img
+          src="Dossier-assets/ohmyfood.png"
+          alt="Logo OhMyFood"
+          title="OhMyFood"
+        />
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <section class="localisation-restaurant">
+      <div class="localisation">
+        <i class="fa-solid fa-location-dot" style="color: #232323"></i>
+        <p>Paris, Belleville</p>
+      </div>
+    </section>
+
+    <section class="presentation">
+      <h2>Réservez le menu qui vous convient</h2>
+      <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins</h3>
+      <button class="btn-explorer"><h5>Explorer nos restaurants</h5></button>
+    </section>
+    <section class="Fonctionnement">
+      <h2>Fonctionnement</h2>
+      <div class="conteneur">
+        <div class="cercle"><p>1</p></div>
+        <button class="btn-nav">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <h5>Choisissez un restaurant</h5>
+        </button>
+        <div class="cercle"><p>2</p></div>
+        <button class="btn-nav">
+          <i class="fa-solid fa-list-ul"></i>
+          <h5>Composez votre menu</h5>
+        </button>
+        <div class="cercle"><p>3</p></div>
+        <button class="btn-nav">
+          <i class="fa-solid fa-store"></i>
+          <h5>Dégustez au restaurant</h5>
+        </button>
+      </div>
+    </section>
+
+    <section class="restaurants">
+      <div class="restaurants-titre">
+        <h2>Restaurants</h2>
+      </div>
+      <div class="restaurants-cartes">
+        <article class="carte">
+          <img
+            src="Restaurants/la-palette-du-gout.jpg"
+            alt="La palette du goût"
+            title="La palette du goût"
+          />
+          <div class="card-contenu">
+            <div class="card-txt">
+              <h3 class="card-titre">La palette du goût</h3>
+              <p class="card-sstitre">Ménilmontant</p>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart fa-lg"></i>
             </div>
-        </div>
-    </header>
+          </div>
+        </article>
 
-    <body>
-        <section class="localisation-restaurant">
-            <div class="localisation"><i class="fa-solid fa-location-dot" style="color: #232323;"></i><p>Paris, Belleville</p></div>
-        </section>
+        <article class="carte">
+          <img
+            src="Restaurants/la-note-enchantee.jpg"
+            alt="La note enchantée"
+            title="La note enchantée"
+          />
+          <div class="card-contenu">
+            <div class="card-txt">
+              <h3 class="card-titre">La note enchantée</h3>
+              <p class="card-sstitre">Charonne</p>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart fa-lg"></i>
+            </div>
+          </div>
+        </article>
 
-        <section class="presentation">
-            <h2>Réservez le menu qui vous convient</h2>
-            <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins</h3>
-            <button class="btn-explorer"><h5>Explorer nos restaurants</h5></button>
-        </section>
+        <article class="carte">
+          <img
+            src="Restaurants/a-la-francaise.jpg"
+            alt="A la française"
+            title="A la française"
+          />
+          <div class="card-contenu">
+            <div class="card-txt">
+              <h3 class="card-titre">A la française</h3>
+              <p class="card-sstitre">Cité Rouge</p>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-solid fa-heart fa-lg"></i>
+            </div>
+          </div>
+        </article>
 
-        <nav>
-            <section class="Fonctionnement">
-                <h2>Fonctionnement</h2>
-                    <div class="conteneur">
-                        <button class="btn-nav-choix-restau"><i class="fa-solid fa-mobile-screen-button"></i><h4>Choisissez un restaurant</h4></button>
-                        <button class="btn-nav-compo-menu"><i class="fa-solid fa-list-ul"></i><h4>Composez votre menu</h4></button>
-                        <button class="btn-nav-degust-restau"><i class="fa-solid fa-store"></i><h4>Dégustez au restaurant</h4></button>
-                    </div>
-                </section>
-        </nav>
+        <article class="carte">
+          <img
+            src="Restaurants/le-delice-des-sens.jpg"
+            alt="Le délice des sens"
+            title="Le délice des sens"
+          />
+          <div class="card-contenu">
+            <div class="card-txt">
+              <h3 class="card-titre">Le délice des sens</h3>
+              <p class="card-sstitre">Folie-Méricourt</p>
+              <i class="fa-regular fa-heart fa-lg"></i>
+              <i class="fa-solid fa-heart fa-lg"></i>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </body>
 
-
-</body>
+  <footer></footer>
 </html>
