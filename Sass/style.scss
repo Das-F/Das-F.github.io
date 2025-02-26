@@ -144,6 +144,11 @@ button {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
 }
 
 .card-txt {
