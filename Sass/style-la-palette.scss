@@ -1,0 +1,133 @@
+/* General */
+* {
+  font-family: "Roboto", serif;
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+  max-width: 375px;
+}
+
+/* Header */
+.header-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 15px 0px 15px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.btn-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 0px solid #ffffff;
+  font-size: 18px;
+  border-radius: 50%;
+  .fa-solid.fa-arrow-left {
+    color: black;
+  }
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: auto;
+  padding: 15px 55px;
+}
+
+/* Main */
+.restaurant {
+  background-color: white;
+  img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+}
+
+h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: xx-large;
+  margin-top: 12px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  .hearts {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .i {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .fa-solid {
+    opacity: 1;
+    color: linear-gradient(#ff79da, #9356dc);
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+.menu {
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 15px;
+  transform: translateY(-18%);
+}
+
+h3 {
+  font-weight: 300;
+  margin: 5px 0px;
+}
+
+.left {
+  width: 40px;
+  height: 3px;
+  border: 1px solid #99e2d0;
+  text-align: left;
+  background-color: #99e2d0;
+  margin-left: 0px;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+button {
+  background-color: white;
+  border: 0px solid white;
+  font-size: 20px;
+  border-radius: 20px;
+  height: 70px;
+  width: 345px;
+  padding: 5px 15px;
+  filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.1));
+  font-size: clamp(15px, 5vw, 25px);
+  h4 {
+    display: flex;
+    align-self: flex-start;
+    font-weight: normal;
+    margin: 0px;
+    padding-bottom: 5px;
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    margin: 0px;
+    font-weight: 300;
+    font-size: medium;
+  }
+}
