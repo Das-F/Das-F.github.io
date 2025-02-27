@@ -182,24 +182,28 @@ button {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 10px;
 }
 ul {
   padding: 0px;
   display: inline-block;
-  justify-content: center;
+  margin: 0px 0px 15px 0px;
 }
 
 li {
   list-style-type: none;
   p {
-    margin: 5px;
+    margin: 5px 0px;
     font-size: small;
+  }
+  .fa-solid {
+    margin-right: 5px;
   }
 }
 
 .ligne-footer {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   i {
     font-size: 12px;
     float: left;
