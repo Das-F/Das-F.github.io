@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="Sass/style-contact.css" />
+  </head>
+
+  <header>
+    <div class="header-main">
+      <nav class="header-nav">
+        <div class="btn-back">
+          <a href="index.html"> <i class="fa-solid fa-arrow-left fa-lg"></i></a>
+        </div>
+      </nav>
+      <div class="header-logo">
+        <img
+          src="Dossier-assets/ohmyfood.png"
+          alt="Logo OhMyFood"
+          title="OhMyFood"
+        />
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <section class="contact">
+      <h1>Nous contacter</h1>
+      <form method="post">
+        <h2>
+          Laissez-nous un message et nous reviendrons vers vous très vite!
+        </h2>
+        <div>
+          <label>Votre email *</label>
+          <input type="email" name="email" required size="30" max lenght="40" />
+        </div>
+
+        <div>
+          <label for="nom">Votre nom</label>
+          <input type="text" name="nom" id="nom" />
+        </div>
+
+        <div>
+          <label for="prenom">Votre prénom</label>
+          <input type="text" name="prenom" id="prenom" />
+        </div>
+
+        <div>
+          <label>Message *</label>
+          <textarea name="message" required></textarea>
+        </div>
+
+        <input type="submit" class="button" />
+      </form>
+      <p>
+        En soumettant ce formulaire, vous acceptez que le site Ohmyfood mémorise
+        et utilise vos données personnelles afin de pouvoir vous contacter.
+        <br />
+        L’éditeur du site s’engage à ne pas transmettre vos coordonnées à
+        quelconque tiers ni les utiliser pour de la publicité.
+      </p>
+    </section>
+    <section class="thanks">
+      <p>
+        Merci de nous avoir contactés !<br />
+        Surveillez votre boite mail, vous allez recevoir de nos nouvelles
+        rapidement.<br />
+        Bonne journée,<br />
+        L’équipe Ohmyfood
+      </p>
+    </section>
+  </body>
+</html>
