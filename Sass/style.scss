@@ -8,6 +8,10 @@ body {
   max-width: 375px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header */
 .header-logo {
   display: flex;
@@ -53,7 +57,7 @@ body {
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
   height: 50px;
-  width: auto;
+  width: 180px;
   text-align: center;
   margin: 10px;
   filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.2));
@@ -129,7 +133,7 @@ button {
 
 .restaurants {
   background-color: #f6f6f6;
-  margin: 30px 0px;
+  padding: 10px 0px 30px 0px;
 }
 
 .carte {
@@ -145,11 +149,6 @@ button {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
   }
 }
 
