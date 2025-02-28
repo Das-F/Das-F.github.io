@@ -59,8 +59,8 @@ body {
   filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.2));
   h5 {
     color: #f6f6f6;
-    font-weight: normal;
-    margin: 10px;
+    font-weight: 400;
+    margin: 15px 10px 10px 10px;
     text-decoration: none;
   }
 }
@@ -138,6 +138,7 @@ button {
   margin: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
   img {
     width: 100%;
     height: 190px;
@@ -153,7 +154,7 @@ button {
 }
 
 .card-txt {
-  padding: 20px 10px 0px 10px;
+  padding: 15px 10px 15px 10px;
   h3 {
     margin: 0px;
   }
@@ -164,10 +165,60 @@ button {
   }
 }
 
-.fa-heart {
+.new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: center;
+  gap: 180px;
+}
+
+.btn-new {
+  height: 29px;
+  width: 80px;
+  background-color: #99e2d0;
+  color: #008766;
+  font-size: 15px;
+  font-weight: 400;
+  border: 0px solid #99e2d0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.heart-icons {
+  position: relative;
+  display: inline-block;
+  i {
+    position: absolute;
+    top: 0px;
+    left: 8px;
+  }
+  .fa-solid {
+    color: linear-gradient(#ff79da, #9356dc);
+    opacity: 0;
+    transition-duration: 400ms linear;
+  }
+  .fa-regular {
+    opacity: 1;
+  }
+  &:hover {
+    .fa-solid {
+      opacity: 1;
+    }
+    .fa-regular {
+      opacity: 0;
+    }
+  }
+}
+
+.hearts {
+  display: flex;
+  position: absolute;
+  bottom: 45px;
+  right: 60px;
+  align-items: flex-end;
 }
 
 /* Footer */
