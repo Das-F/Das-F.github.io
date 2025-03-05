@@ -3,6 +3,7 @@
   font-family: "Roboto", serif;
   box-sizing: border-box;
 }
+
 body {
   margin: auto;
   max-width: 375px;
@@ -27,6 +28,7 @@ a {
   align-items: center;
   padding: 15px;
 }
+
 .localisation {
   display: flex;
   justify-content: center;
@@ -42,17 +44,18 @@ a {
   text-align: center;
   padding: 40px 10px;
   background-color: #f6f6f6;
-  h2 {
-    margin: 5px 0px;
-    padding: 0px 40px;
-  }
-  h3 {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    font-weight: normal;
-    color: #353535;
-  }
 }
+.presentation h2 {
+  margin: 5px 0px;
+  padding: 0px 40px;
+}
+.presentation h3 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #353535;
+}
+
 .btn-explorer {
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
@@ -61,28 +64,29 @@ a {
   text-align: center;
   margin: 10px;
   filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.2));
-  h5 {
-    color: #f6f6f6;
-    font-weight: 400;
-    margin: 15px 10px 10px 10px;
-    text-decoration: none;
-  }
+}
+.btn-explorer h5 {
+  color: #f6f6f6;
+  font-weight: 400;
+  margin: 15px 10px 10px 10px;
+  text-decoration: none;
 }
 
 h2 {
   padding: 30px 20px 0px 20px;
 }
+
 .Fonctionnement {
   margin-bottom: 70px;
-  .fa-solid {
-    color: #808080;
-    &:hover {
-      color: #9356dc;
-    }
-  }
-  .fa-solid.fa-mobile-screen-button {
-    margin: 0px 15px;
-  }
+}
+.Fonctionnement .fa-solid {
+  color: #808080;
+}
+.Fonctionnement .fa-solid:hover {
+  color: #9356dc;
+}
+.Fonctionnement .fa-solid.fa-mobile-screen-button {
+  margin: 0px 15px;
 }
 
 .conteneur {
@@ -115,11 +119,11 @@ button {
   height: 24px;
   width: 24px;
   z-index: 1;
-  p {
-    color: #f6f6f6;
-    margin-left: 8px;
-    margin-top: 3px;
-  }
+}
+.cercle p {
+  color: #f6f6f6;
+  margin-left: 8px;
+  margin-top: 3px;
 }
 
 .btn-nav {
@@ -133,7 +137,6 @@ button {
 }
 
 /*Restaurants*/
-
 .restaurants {
   background-color: #f6f6f6;
   padding: 10px 0px 30px 0px;
@@ -146,26 +149,27 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
+}
+.carte img {
+  width: 100%;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-txt {
   padding: 15px 10px 15px 10px;
-  h3 {
-    margin: 0px;
-    text-decoration: none;
-  }
-  p {
-    padding: 5px 0px;
-    margin: 0px;
-    font-weight: normal;
-  }
+}
+.card-txt h3 {
+  margin: 0px;
+  text-decoration: none;
+}
+.card-txt p {
+  padding: 5px 0px;
+  margin: 0px;
+  font-weight: normal;
 }
 
 .new {
@@ -193,27 +197,25 @@ button {
 .heart-icons {
   position: relative;
   display: inline-block;
-  i {
-    position: absolute;
-    top: 0px;
-    left: 8px;
-  }
-  .fa-solid {
-    color: linear-gradient(#ff79da, #9356dc);
-    opacity: 0;
-    transition-duration: 400ms linear;
-  }
-  .fa-regular {
-    opacity: 1;
-  }
-  &:hover {
-    .fa-solid {
-      opacity: 1;
-    }
-    .fa-regular {
-      opacity: 0;
-    }
-  }
+}
+.heart-icons i {
+  position: absolute;
+  top: 0px;
+  left: 8px;
+}
+.heart-icons .fa-solid {
+  color: linear-gradient(#ff79da, #9356dc);
+  opacity: 0;
+  transition-duration: 400ms linear;
+}
+.heart-icons .fa-regular {
+  opacity: 1;
+}
+.heart-icons:hover .fa-solid {
+  opacity: 1;
+}
+.heart-icons:hover .fa-regular {
+  opacity: 0;
 }
 
 .hearts {
@@ -239,6 +241,7 @@ button {
   font-style: normal;
   margin-top: 10px;
 }
+
 ul {
   padding: 0px;
   display: inline-block;
@@ -247,22 +250,22 @@ ul {
 
 li {
   list-style-type: none;
-  p {
-    margin: 5px 0px;
-    font-size: small;
-    text-decoration: none;
-    color: white;
-  }
-  .fa-solid {
-    margin-right: 5px;
-  }
+}
+li p {
+  margin: 5px 0px;
+  font-size: small;
+  text-decoration: none;
+  color: white;
+}
+li .fa-solid {
+  margin-right: 5px;
 }
 
 .ligne-footer {
   display: flex;
   align-items: center;
-  i {
-    font-size: 12px;
-    float: left;
-  }
 }
+.ligne-footer i {
+  font-size: 12px;
+  float: left;
+}/*# sourceMappingURL=style.css.map */
