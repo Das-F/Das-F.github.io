@@ -142,6 +142,7 @@ h2 {
   background-color: white;
   border-radius: 20px;
   margin: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -159,12 +160,14 @@ h2 {
   h3 {
     margin: 0px;
     text-decoration: none;
+    color: black;
   }
   p {
     padding: 5px 0px;
     margin: 0px;
-    font-weight: normal;
+    font-weight: 300;
     text-decoration: none;
+    color: black;
   }
 }
 
@@ -201,20 +204,18 @@ h2 {
     left: 8px;
   }
   .fa-solid {
-    color: linear-gradient(#ff79da, #9356dc);
+    display: inline-block;
     opacity: 0;
-    transition-duration: 400ms linear;
+    background: linear-gradient(#ff79da, #9356dc);
+    background-clip: text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition-property: all;
+    transition-duration: 2s;
   }
-  .fa-regular {
+  .fa-solid:hover {
     opacity: 1;
-  }
-  &:hover {
-    .fa-solid {
-      opacity: 1;
-    }
-    .fa-regular {
-      opacity: 0;
-    }
   }
 }
 
@@ -270,22 +271,50 @@ li {
 }
 
 /* Medium devices (tablets) */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+}
+body {
+  max-width: 1023.98px;
+}
+
+.Fonctionnement {
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+.restaurants {
+  padding: 10px 80px 30px 80px;
+  h2 {
+    padding: 0px 20px 0px 20px;
+  }
 }
 
 /* Large devices (desktop) */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     margin: auto;
     max-width: 1440px;
   }
 
+  .lettre {
+    font-size: 60px;
+    letter-spacing: 8px;
+    margin-bottom: 100px;
+  }
+
+  .localisation {
+    filter: none;
+  }
+
   .presentation {
+    padding: 20px 10px;
     h2 {
-      font-size: xx-large;
+      font-size: 40px;
+      font-weight: 700;
     }
     h3 {
-      font-size: medium;
+      font-weight: 300;
+      margin: 22px 0px;
     }
     .btn-explorer:hover {
       background: linear-gradient(
@@ -295,25 +324,55 @@ li {
       filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.4));
     }
   }
-}
 
-.footer-section {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 40px;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: row-reverse;
-  p {
-    padding: 10px;
-    margin-top: 5px;
+  .Fonctionnement {
+    padding: 0px 30px;
+    .conteneur {
+      display: flex;
+      flex-direction: row;
+      margin-left: 20px;
+      .cercle {
+        margin-right: -30px;
+      }
+    }
   }
-}
 
-.a-propos {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+  .restaurants-cartes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .carte {
+    width: 43%;
+
+    .card-txt {
+      padding: 15px;
+    }
+  }
+
+  .footer-section {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    p {
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .a-propos {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+    }
+  }
+
+  .footer-title {
+    margin: 0px 40px 7px 40px;
+  }
 }
