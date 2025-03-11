@@ -173,26 +173,24 @@ h3 {
 }
 
 .plate {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border: 0px solid;
   font-size: 20px;
   border-radius: 17px;
-  height: 70px;
-  width: 345px;
-  padding: 5px 15px;
+  width: 100%;
+  padding: 0;
   margin-bottom: 12px;
   opacity: 0;
-  animation: plates 3s ease-out forwards;
-
+  animation: plates 1.7s ease-out forwards;
   filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.1));
   font-size: clamp(15px, 5vw, 25px);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   .title-plate {
-    display: flex;
-    justify-content: space-between;
+    padding: 5px 15px;
   }
   h4 {
     display: flex;
@@ -200,17 +198,44 @@ h3 {
     font-weight: 500;
     margin: 0px;
     padding: 5px 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
-  .price {
+  .price-check {
     display: flex;
-    justify-content: space-between;
+    .price {
+      display: flex;
+      align-items: end;
+      padding: 5px 15px;
+    }
+    .check-zone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: -60px;
+      width: 60px;
+      height: 70px;
+      background-color: #99e2d0;
+      border-radius: 0px 17px 17px 0px;
+      i {
+        color: white;
+      }
+    }
   }
+  .price-check:hover {
+    animation: check 500ms ease forwards;
+  }
+
   p {
     margin: 0px;
     font-weight: 300;
     font-size: medium;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     .strong {
-      transform: translateX(50px);
+      transform: translateX(60px);
     }
   }
 }
@@ -219,27 +244,12 @@ h3 {
   display: none;
 }
 
-.check-zone {
-  position: absolute;
-  background-color: #99e2d0;
-  border-radius: 0px 17px 17px 0px;
-  width: 60px;
-  height: 70px;
-  right: -62px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -56px;
-  .checkmark {
-    position: absolute;
-  }
-}
 .toggle-check:checked ~ .check-zone {
   right: 0;
 }
 
 .toggle-check:checked ~ .price {
-  animation: check 0.3s ease-in-out forwards;
+  animation: check 5s ease-in-out forwards;
 }
 
 @keyframes check {
@@ -247,7 +257,7 @@ h3 {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50px);
+    transform: translateX(-60px);
   }
 }
 
@@ -309,4 +319,59 @@ li {
     font-size: 12px;
     float: left;
   }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 768px) {
+}
+body {
+  max-width: 1023.98px;
+}
+.header-main {
+  justify-content: stretch;
+}
+.title {
+  justify-content: center;
+  i {
+    right: 90px;
+  }
+}
+.menu {
+  padding: 40px;
+  .command {
+    padding-top: 20px;
+  }
+}
+.footer-section {
+  padding: 20px 40px;
+}
+
+/* Large devices (desktop) */
+@media screen and (min-width: 1024px) {
+  body {
+    margin: auto;
+    max-width: 1440px;
+  }
+}
+.menu {
+  margin: 0px auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  p {
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .a-propos {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+}
+
+.footer-title {
+  margin: 0px 40px 7px 40px;
 }
