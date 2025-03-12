@@ -5,7 +5,6 @@
 }
 body {
   margin: auto;
-  max-width: 375px;
 }
 
 $clr-btn-start: #ff79da;
@@ -81,7 +80,7 @@ a {
 }
 
 h2 {
-  padding: 30px 20px 0px 20px;
+  padding: 20px 20px 0px 20px;
 }
 .Fonctionnement {
   margin-bottom: 70px;
@@ -143,6 +142,9 @@ h2 {
 .restaurants {
   background-color: #f6f6f6;
   padding: 10px 0px 30px 0px;
+  .restaurants-cartes {
+    width: 92%;
+  }
 }
 
 .carte {
@@ -159,6 +161,11 @@ h2 {
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  }
+  .card-contenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -178,60 +185,39 @@ h2 {
   }
 }
 
-.new {
+.btn-new {
   position: absolute;
   top: 15px;
   right: 15px;
-  display: flex;
-  flex-direction: column;
+  height: 29px;
+  width: 80px;
+  background-color: #99e2d0;
+  color: #008766;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
   align-items: center;
-  gap: 180px;
-  .btn-new {
-    height: 29px;
-    width: 80px;
-    background-color: #99e2d0;
-    color: #008766;
-    font-size: 15px;
-    font-weight: 400;
-    text-align: center;
-    align-items: center;
-    border: 0px solid #99e2d0;
-    border-radius: 2px;
-    position: relative;
-    padding: 5px;
-  }
+  border: 0px solid #99e2d0;
+  border-radius: 2px;
+  padding: 5px;
 }
 
 .heart-icons {
-  position: relative;
   display: inline-block;
   i {
-    position: absolute;
-    top: 0px;
-    left: 8px;
-  }
-  .fa-solid {
-    display: inline-block;
-    opacity: 0;
-    background: linear-gradient(#ff79da, #9356dc);
-    background-clip: text;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition-property: all;
-    transition-duration: 2s;
-  }
-  .fa-solid:hover {
-    opacity: 1;
+    font-size: 24px;
+    &:hover {
+      font-weight: 600;
+      color: transparent;
+      background: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
   }
 }
 
 .hearts {
-  display: flex;
-  position: absolute;
-  bottom: 45px;
-  right: 60px;
-  align-items: flex-end;
+  padding-right: 15px;
 }
 
 /* Footer */
@@ -279,20 +265,23 @@ li {
 
 /* Medium devices (tablets) */
 @media screen and (min-width: 768px) {
-}
-body {
-  max-width: 1023.98px;
-}
+  body {
+    max-width: 1023.98px;
+  }
 
-.Fonctionnement {
-  padding-left: 180px;
-  padding-right: 180px;
-}
+  .Fonctionnement {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
 
-.restaurants {
-  padding: 10px 80px 30px 80px;
-  h2 {
-    padding: 0px 20px 0px 20px;
+  .restaurants {
+    padding: 10px 80px 30px 80px;
+    h2 {
+      padding: 0px 20px 0px 20px;
+    }
+    .restaurants-cartes {
+      width: 100%;
+    }
   }
 }
 
@@ -349,6 +338,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+    width: 100%;
   }
   .carte {
     width: 43%;
