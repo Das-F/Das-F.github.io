@@ -54,7 +54,7 @@ $clr-btn-end: #9356dc;
   background-color: white;
   img {
     width: 100%;
-    height: 190px;
+    height: 270px;
     object-fit: cover;
   }
 }
@@ -330,7 +330,11 @@ li {
   .header-main {
     padding: 10px 15px 10px 15px;
   }
-
+  .restaurant {
+    img {
+      height: 380px;
+    }
+  }
   .menu2 {
     max-width: 1055px;
     margin: 0 auto;
