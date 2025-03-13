@@ -5,7 +5,6 @@
 }
 body {
   margin: auto;
-  max-width: 375px;
   a {
     text-decoration: none;
   }
@@ -18,7 +17,9 @@ $clr-btn-end: #9356dc;
 .header-main {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  gap: 0;
   padding: 5px 15px 0px 15px;
 }
 
@@ -61,7 +62,7 @@ $clr-btn-end: #9356dc;
 h2 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
-  font-size: xx-large;
+  font-size: 28px;
   margin-top: 12px;
   margin-bottom: 0px;
 }
@@ -72,37 +73,34 @@ h2 {
   align-items: center;
   flex-direction: row;
   position: relative;
+  padding: 0px 10px;
+}
+.heart-icons {
+  display: inline-block;
   i {
-    position: absolute;
-    right: 8px;
-    top: 35px;
-  }
-  .fa-solid {
-    color: linear-gradient(#ff79da, #9356dc);
-    opacity: 0;
-    transition-duration: 400ms linear;
-  }
-  .fa-regular {
-    opacity: 1;
-  }
-  &:hover {
-    .fa-solid {
-      opacity: 1;
-    }
-    .fa-regular {
-      opacity: 0;
+    font-size: 24px;
+    margin-top: 15px;
+    &:hover {
+      font-weight: 600;
+      color: transparent;
+      background: linear-gradient(#ff79da, #9356dc);
+      background-clip: text;
+      -webkit-background-clip: text;
     }
   }
 }
 
-.menu {
+.menu2 {
   background-color: #f6f6f6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 15px;
   transform: translateY(-4%);
+  padding: 10px 15px;
 }
 .list-plates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   animation: plates 1s ease-out forwards;
 }
 
@@ -192,13 +190,23 @@ h3 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  &:hover {
+    .price-check {
+      .check-zone {
+        margin-right: 0px;
+      }
+    }
+    .title-plate {
+      width: calc(100% - 120px);
+    }
+  }
   .title-plate {
-    padding: 5px 15px;
+    padding: 5px 0 5px 15px;
+    width: calc(100% - 60px);
   }
   h4 {
-    display: flex;
-    align-self: flex-start;
     font-weight: 500;
+    font-size: 18px;
     margin: 0px;
     padding: 5px 0px;
     text-overflow: ellipsis;
@@ -211,6 +219,7 @@ h3 {
       display: flex;
       align-items: end;
       padding: 5px 15px;
+      width: 60px;
     }
     .check-zone {
       display: flex;
@@ -218,18 +227,14 @@ h3 {
       align-items: center;
       margin-right: -60px;
       width: 60px;
-      height: 70px;
       background-color: #99e2d0;
       border-radius: 0px 17px 17px 0px;
+      transition: all 0.5s ease-in-out;
       i {
         color: white;
       }
     }
   }
-  .price-check:hover {
-    animation: check 500ms ease forwards;
-  }
-
   p {
     margin: 0px;
     font-weight: 300;
@@ -243,30 +248,10 @@ h3 {
   }
 }
 
-.toggle-check {
-  display: none;
-}
-
-.toggle-check:checked ~ .check-zone {
-  right: 0;
-}
-
-.toggle-check:checked ~ .price {
-  animation: check 5s ease-in-out forwards;
-}
-
-@keyframes check {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-60px);
-  }
-}
-
 .command {
   display: flex;
   justify-content: center;
+  padding: 20px 0px;
   .btn-explorer {
     background: linear-gradient(#ff79da, #9356dc);
     border-radius: 25px;
@@ -277,7 +262,6 @@ h3 {
     color: #f6f6f6;
     font-weight: 400;
     font-size: medium;
-    margin: 15px 10px 10px 10px;
     text-decoration: none;
     &:hover {
       background: linear-gradient(
@@ -328,5 +312,55 @@ li {
   i {
     font-size: 12px;
     float: left;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 768px) {
+  .title {
+    justify-content: center;
+    gap: 45px;
+  }
+  .menu2 {
+    padding: 20px 40px;
+  }
+}
+/* Large devices (desktop) */
+@media screen and (min-width: 1024px) {
+  .header-main {
+    padding: 10px 15px 10px 15px;
+  }
+
+  .menu2 {
+    max-width: 1055px;
+    margin: 0 auto;
+    .list-plates {
+      width: 70%;
+      margin: auto;
+    }
+  }
+  .footer-section {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    p {
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .a-propos {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+    }
+  }
+
+  .footer-title {
+    margin: 0px 40px 7px 40px;
   }
 }
