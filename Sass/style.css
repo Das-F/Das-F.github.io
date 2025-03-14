@@ -6,7 +6,6 @@
 
 body {
   margin: auto;
-  max-width: 375px;
 }
 
 a {
@@ -72,13 +71,16 @@ a {
   margin: 15px 10px 10px 10px;
   text-decoration: none;
 }
-
-h2 {
-  padding: 30px 20px 0px 20px;
+.btn-explorer:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.4));
 }
 
 .Fonctionnement {
-  margin-bottom: 70px;
+  margin: 10px 15px 70px 15px;
+}
+.Fonctionnement h2 {
+  padding-left: 5%;
 }
 .Fonctionnement .fa-solid {
   color: #808080;
@@ -135,13 +137,17 @@ h2 {
 /*Restaurants*/
 .restaurants {
   background-color: #f6f6f6;
-  padding: 10px 0px 30px 0px;
+  padding: 10px 10px 30px 10px;
+}
+.restaurants .restaurants-cartes {
+  width: 92%;
 }
 
 .carte {
   background-color: white;
   border-radius: 20px;
   margin: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -154,6 +160,11 @@ h2 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+.carte .card-contenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
 .card-txt {
   padding: 15px 10px 15px 10px;
@@ -161,24 +172,20 @@ h2 {
 .card-txt h3 {
   margin: 0px;
   text-decoration: none;
+  color: black;
 }
 .card-txt p {
   padding: 5px 0px;
   margin: 0px;
-  font-weight: normal;
+  font-weight: 300;
   text-decoration: none;
+  color: black;
 }
 
-.new {
+.btn-new {
   position: absolute;
   top: 15px;
   right: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 180px;
-}
-.new .btn-new {
   height: 29px;
   width: 80px;
   background-color: #99e2d0;
@@ -189,40 +196,25 @@ h2 {
   align-items: center;
   border: 0px solid #99e2d0;
   border-radius: 2px;
-  position: relative;
   padding: 5px;
 }
 
 .heart-icons {
-  position: relative;
   display: inline-block;
 }
 .heart-icons i {
-  position: absolute;
-  top: 0px;
-  left: 8px;
+  font-size: 24px;
 }
-.heart-icons .fa-solid {
-  color: linear-gradient(#ff79da, #9356dc);
-  opacity: 0;
-  transition-duration: 400ms linear;
-}
-.heart-icons .fa-regular {
-  opacity: 1;
-}
-.heart-icons:hover .fa-solid {
-  opacity: 1;
-}
-.heart-icons:hover .fa-regular {
-  opacity: 0;
+.heart-icons i:hover {
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .hearts {
-  display: flex;
-  position: absolute;
-  bottom: 45px;
-  right: 60px;
-  align-items: flex-end;
+  padding-right: 15px;
 }
 
 /* Footer */
@@ -270,40 +262,97 @@ li .fa-solid {
 }
 
 /* Medium devices (tablets) */
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1023.98px;
+  }
+  .Fonctionnement {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .restaurants {
+    padding: 10px 80px 30px 80px;
+  }
+  .restaurants h2 {
+    padding: 0px 20px 0px 20px;
+  }
+  .restaurants .restaurants-cartes {
+    width: 100%;
+  }
+}
 /* Large devices (desktop) */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     margin: auto;
     max-width: 1440px;
   }
+  .lettre {
+    font-size: 60px;
+    letter-spacing: 8px;
+    margin-bottom: 100px;
+  }
+  .localisation {
+    filter: none;
+  }
+  .presentation {
+    padding: 20px 10px;
+  }
   .presentation h2 {
-    font-size: xx-large;
+    font-size: 40px;
+    font-weight: 700;
   }
   .presentation h3 {
-    font-size: medium;
+    font-weight: 300;
+    margin: 22px 0px;
   }
   .presentation .btn-explorer:hover {
     background: linear-gradient(#ff93e1, #a16be0);
     filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.4));
   }
-}
-.footer-section {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 40px;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.footer-container p {
-  padding: 10px;
-  margin-top: 5px;
-}
-
-.a-propos {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+  .Fonctionnement {
+    padding: 0px 30px;
+  }
+  .Fonctionnement .conteneur {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+  .Fonctionnement .conteneur .cercle {
+    margin-right: -30px;
+  }
+  .restaurants-cartes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+  .carte {
+    width: 43%;
+  }
+  .carte .card-txt {
+    padding: 15px;
+  }
+  .footer-section {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer-container p {
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .footer-container .a-propos {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .footer-title {
+    margin: 0px 40px 7px 40px;
+  }
 }/*# sourceMappingURL=style.css.map */

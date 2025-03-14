@@ -19,7 +19,7 @@
   font-size: 30px;
   letter-spacing: 5px;
   margin-bottom: 100px;
-  animation: flash 1.5s linear forwards;
+  animation: flash 1.8s linear forwards;
 }
 .loader .lettre:nth-child(1) {
   animation-delay: 0.1s;
