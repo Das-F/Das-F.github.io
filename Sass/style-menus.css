@@ -242,6 +242,7 @@ h3 {
 }
 .plate .price-check .check-zone i {
   color: white;
+  font-size: 22px;
 }
 .plate p {
   margin: 0px;
@@ -368,5 +369,11 @@ li .fa-solid {
   }
   .footer-title {
     margin: 0px 40px 7px 40px;
+  }
+}
+/* Very Large devices (desktop) */
+@media screen and (min-width: 1440px) {
+  .menu2 {
+    transform: translateY(-4.5%);
   }
 }/*# sourceMappingURL=style-menus.css.map */

@@ -336,7 +336,6 @@ li {
       height: 380px;
     }
   }
-
   .menu2 {
     max-width: 1055px;
     margin: 0 auto;
@@ -368,5 +367,12 @@ li {
 
   .footer-title {
     margin: 0px 40px 7px 40px;
+  }
+}
+
+/* Very Large devices (desktop) */
+@media screen and (min-width: 1440px) {
+  .menu2 {
+    transform: translateY(-4.5%);
   }
 }
